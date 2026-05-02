@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FireWise Strategic Roadmap | Instructure</title>
+    <title>FireWise Strategic Roadmap | Instructure Partnership</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -12,18 +12,8 @@
         PALETTE: "Professional & Vibrant"
         Primary: #F3592A (Instructure Orange)
         Secondary: #243342 (Deep Slate)
-        Accent: #FFFFFF (Pure White)
-        Success: #22C55E (Growth Green)
-        Neutral: #F8FAFC (Cool White Background)
-    -->
-
-    <!-- 
-        INFOGRAPHIC NARRATIVE PLAN:
-        1. THE VISIONARY HOOK: Frame the transition from admin burden to infrastructure asset.
-        2. THE CAPITAL BUILD: Visualize the Year 1 implementation as the Core Infrastructure.
-        3. THE NETWORK ENGINE: Use structured HTML/CSS to show Parent/Child B2B nodes.
-        4. THE PROFIT WEDGE: Show the 3-year ROI expansion, pricing logic, and breakeven points.
-        5. FOOTNOTE: Data Residency and Package specifics.
+        Success: #16A34A (Canadian Growth Green)
+        Background: #F8FAFC (System Neutral)
     -->
 
     <style>
@@ -32,9 +22,8 @@
         .bg-instructure-orange { background-color: #F3592A; }
         .bg-instructure-slate { background-color: #243342; }
         .border-orange { border-color: #F3592A; }
-        
         .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
-        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+        .glass { background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(12px); }
         
         .chart-container {
             position: relative;
@@ -43,72 +32,75 @@
             margin-left: auto;
             margin-right: auto;
             height: 350px;
-            max-height: 450px;
+            max-height: 400px;
         }
 
-        /* B2B Node Network - HTML/CSS Only */
+        /* B2B Node Network - Pure CSS/HTML Implementation (NO SVG) */
         .node-network {
             position: relative;
-            height: 420px;
+            height: 440px;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #ffffff;
-            border-radius: 32px;
+            border-radius: 40px;
             border: 1px solid #e2e8f0;
             overflow: hidden;
         }
 
-        .node-line-h { position: absolute; height: 2px; background: #F3592A; z-index: 1; opacity: 0.2; }
-        .node-line-v { position: absolute; width: 2px; background: #F3592A; z-index: 1; opacity: 0.2; }
+        .node-line-h { position: absolute; height: 2px; background: #F3592A; z-index: 1; opacity: 0.15; }
+        .node-line-v { position: absolute; width: 2px; background: #F3592A; z-index: 1; opacity: 0.15; }
 
         .central-authority {
             background: #243342;
             color: white;
             padding: 1.5rem;
-            border-radius: 12px;
+            border-radius: 14px;
             border: 4px solid #F3592A;
             text-align: center;
-            width: 220px;
+            width: 240px;
             z-index: 10;
-            box-shadow: 0 15px 30px -10px rgba(243, 89, 42, 0.5);
+            box-shadow: 0 20px 30px -10px rgba(243, 89, 42, 0.4);
         }
 
         .department-node {
             position: absolute;
             background: #ffffff;
             padding: 1.25rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
+            border: 2px solid #f1f5f9;
+            border-radius: 12px;
             width: 160px;
             text-align: center;
             z-index: 10;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .department-node:hover {
             border-color: #F3592A;
-            transform: translateY(-8px);
-            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
         .captain-badge {
             position: absolute;
-            bottom: -20px;
+            top: -20px;
             right: -20px;
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             background: #243342;
-            border: 3px solid #F3592A;
+            border: 4px solid #FFFFFF;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            font-size: 1.2rem;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
         }
+
+        .department-node:hover .captain-badge { transform: rotate(15deg) scale(1.1); }
 
         @keyframes pulse-orange {
             0% { box-shadow: 0 0 0 0 rgba(243, 89, 42, 0.4); }
@@ -118,23 +110,27 @@
         .cta-pulse { animation: pulse-orange 2.5s infinite; }
     </style>
 </head>
-<body class="antialiased selection:bg-orange-100 selection:text-orange-900">
+<body class="antialiased">
 
-    <nav class="fixed top-0 w-full glass z-50 border-b border-gray-200 shadow-sm">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full glass z-50 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="bg-instructure-orange text-white w-10 h-10 rounded-lg flex items-center justify-center font-black text-xl tracking-tighter">F</div>
-                <span class="text-2xl font-extrabold tracking-tight text-slate-800">FireWise</span>
+                <div class="bg-instructure-orange text-white w-10 h-10 rounded-lg flex items-center justify-center font-black text-xl">F</div>
+                <span class="text-2xl font-extrabold tracking-tighter text-slate-800">FireWise</span>
             </div>
-            <div class="hidden md:flex space-x-6 text-sm font-bold uppercase tracking-widest text-gray-400">
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
                 <a href="#vision" class="hover:text-instructure-orange transition-colors">Vision</a>
-                <a href="#investment" class="hover:text-instructure-orange transition-colors">Foundation</a>
-                <a href="#scale" class="hover:text-instructure-orange transition-colors">B2B Network</a>
+                <a href="#foundation" class="hover:text-instructure-orange transition-colors">Foundation</a>
+                <a href="#network" class="hover:text-instructure-orange transition-colors">B2B Network</a>
                 <a href="#roi" class="hover:text-instructure-orange transition-colors">ROI Engine</a>
             </div>
             <div class="flex items-center space-x-4">
-                <span class="hidden lg:block text-[10px] font-bold uppercase tracking-tighter text-gray-400 border-r pr-4 border-gray-200">Data Residency: Canada</span>
-                <a href="https://calendar.app.google/dG4Vv1rhev7sw7YaA" target="_blank" class="bg-instructure-orange text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-orange-600 transition-all cta-pulse shadow-lg shadow-orange-200">
+                <div class="hidden lg:flex items-center bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
+                    <span class="text-[9px] font-black uppercase text-slate-500 mr-2 italic tracking-widest">Residency:</span>
+                    <span class="text-[10px] font-bold text-slate-800">Hosted in Canada &#x1F1E8;&#x1F1E6;</span>
+                </div>
+                <a href="https://calendar.app.google/dG4Vv1rhev7sw7YaA" target="_blank" class="bg-instructure-orange text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-orange-600 transition-all cta-pulse shadow-xl">
                     Book Demo
                 </a>
             </div>
@@ -143,84 +139,95 @@
 
     <main class="pt-28 pb-20">
 
-        <!-- Intro Section -->
+        <!-- Executive Summary Section -->
         <section id="vision" class="max-w-7xl mx-auto px-6 mb-24">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <div class="inline-flex items-center bg-orange-100 text-orange-700 font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-widest mb-6">
-                        <span class="mr-2">&#x1F1E8;&#x1F1E6;</span> Canada-Hosted Strategic Infrastructure
-                    </div>
-                    <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6 text-slate-900">
-                        Operational <br><span class="text-instructure-orange italic underline decoration-4 underline-offset-8">Freedom</span> for Growth.
+                    <h1 class="text-6xl lg:text-8xl font-black leading-tight mb-8 text-slate-900 tracking-tighter">
+                        Revenue <br><span class="text-instructure-orange italic">Leverage.</span>
                     </h1>
-                    <p class="text-xl text-gray-500 mb-8 leading-relaxed font-light">
-                        Richie, as a former BDC Director, you evaluate platforms based on <strong>Operating Leverage.</strong> We are moving FireWise from "manual service debt" to a high-yield B2B Network that generates revenue while you sleep.
+                    <p class="text-xl text-gray-500 mb-10 leading-relaxed font-light">
+                        Richie, we are moving FireWise from a manual delivery model to a high-yield B2B infrastructure. This roadmap prioritizes **Operating Leverage**, allowing you to scale municipal contracts across Canada while decoupling growth from labor costs.
                     </p>
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="bg-white p-6 rounded-2xl card-shadow border-t-4 border-orange-500">
-                            <h4 class="text-xs uppercase font-bold text-gray-400 mb-2">Platform Baseline</h4>
-                            <p class="text-3xl font-black text-slate-800">252 <span class="text-xs font-normal uppercase text-gray-400">Users</span></p>
+                            <h4 class="text-[10px] uppercase font-black text-gray-400 mb-2 tracking-widest">Package Capacity</h4>
+                            <p class="text-3xl font-black text-slate-800">252 <span class="text-xs font-normal uppercase text-gray-400">Monthly Active Users</span></p>
                         </div>
                         <div class="bg-slate-900 p-6 rounded-2xl card-shadow border-t-4 border-orange-500">
-                            <h4 class="text-xs uppercase font-bold text-orange-400 mb-2">Total Enrollments</h4>
-                            <p class="text-3xl font-black text-white">2,500 <span class="text-xs font-normal uppercase text-gray-400">/ Year</span></p>
+                            <h4 class="text-[10px] uppercase font-black text-orange-400 mb-2 tracking-widest">Enrollment Limit</h4>
+                            <p class="text-3xl font-black text-white">2,500 <span class="text-xs font-normal uppercase text-gray-400">Annual Seats</span></p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-instructure-slate rounded-[3rem] p-12 card-shadow relative overflow-hidden text-white border-8 border-white">
-                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full"></div>
-                    <h3 class="text-3xl font-black mb-8 flex items-center"><span class="text-4xl mr-4">&#x1F6E1;&#xFE0F;</span> Core Infrastructure</h3>
-                    <p class="text-gray-300 leading-relaxed mb-8 text-lg font-light">
-                        Thinkific is a "Sedan." Instructure is the <strong>Network Mothership</strong> built for multi-tenant isolation, automated municipal compliance, and global B2B expansion.
-                    </p>
-                    <div class="space-y-5">
-                        <div class="flex items-center text-white font-bold bg-white/10 p-4 rounded-xl">
-                            <span class="mr-4 text-instructure-orange text-2xl">&#x2714;</span> No Start-Date Asynchronous Freedom
-                        </div>
-                        <div class="flex items-center text-white font-bold bg-white/10 p-4 rounded-xl">
-                            <span class="mr-4 text-instructure-orange text-2xl">&#x2714;</span> Self-Service Captain Dashboards
-                        </div>
-                        <div class="flex items-center text-white font-bold bg-white/10 p-4 rounded-xl">
-                            <span class="mr-4 text-instructure-orange text-2xl">&#x2714;</span> 1031/1033 ProBoard Compliance
+                <div class="bg-white p-2 rounded-[3.5rem] shadow-2xl">
+                    <div class="bg-instructure-slate rounded-[3.2rem] p-12 text-white relative overflow-hidden h-full border border-white/10">
+                        <div class="absolute -top-12 -right-12 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
+                        <h3 class="text-4xl font-black mb-8 leading-tight italic">Building the Core <br>Foundation.</h3>
+                        <p class="text-gray-300 leading-relaxed mb-8 text-lg font-light">
+                            Thinkific is a video hosting tool. Instructure is the <strong>Enterprise Network Engine</strong> built for multi-tenant isolation, automated compliance management, and global B2B expansion.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center text-white font-bold bg-white/5 p-5 rounded-2xl border border-white/10 transition-colors hover:bg-white/10">
+                                <span class="mr-5 text-instructure-orange text-3xl font-black italic">1</span> Asynchronous As-You-Go Freedom
+                            </div>
+                            <div class="flex items-center text-white font-bold bg-white/5 p-5 rounded-2xl border border-white/10 transition-colors hover:bg-white/10">
+                                <span class="mr-5 text-instructure-orange text-3xl font-black italic">2</span> Branded Captain Command Dashboards
+                            </div>
+                            <div class="flex items-center text-white font-bold bg-white/5 p-5 rounded-2xl border border-white/10 transition-colors hover:bg-white/10">
+                                <span class="mr-5 text-instructure-orange text-3xl font-black italic">3</span> Automated 1031/1033 Compliance
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Capital Build Section -->
-        <section id="investment" class="bg-slate-900 text-white py-24 mb-24">
+        <!-- Implementation Section -->
+        <section id="foundation" class="bg-slate-900 text-white py-28 mb-24">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl lg:text-5xl font-black mb-4">Protecting the Foundation</h2>
-                    <p class="text-gray-400 max-w-3xl mx-auto text-xl font-light italic">
-                        "I am prepared to negotiate the implementation details to ensure we don't remove any components instrumental to building your foundation."
+                <div class="text-center mb-20">
+                    <h2 class="text-5xl lg:text-6xl font-black mb-8 uppercase tracking-tighter italic">Architectural Integrity</h2>
+                    <p class="text-gray-400 max-w-4xl mx-auto text-xl font-light leading-relaxed">
+                        "I am prepared to negotiate implementation details to ensure we don't remove components instrumental to building your foundation. If other vendors aren't discussing this architecture, they don't see your future."
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+                    <div class="bg-slate-800/50 p-10 rounded-[3rem] border border-slate-700">
                         <div class="chart-container">
                             <canvas id="investmentChart"></canvas>
                         </div>
+                        <div class="mt-8 pt-8 border-t border-slate-700/50 text-center">
+                            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-500">Year 1 Infrastructure Composition</p>
+                        </div>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold mb-8">Year 1 Total Investment: <span class="text-instructure-orange">CAD 48,467.20</span></h3>
-                        <p class="text-gray-400 mb-8 leading-relaxed text-lg">
-                            This one-time build establishes the "Expandable Bus" architecture. It ensures that when you onboard the next city, the process is automated and secure, requiring zero manual work from Julie.
+                        <h3 class="text-4xl font-black mb-10 leading-tight">Capital Investment: <br><span class="text-instructure-orange">CAD 48,467.20</span></h3>
+                        <p class="text-gray-400 mb-10 leading-relaxed text-lg font-light">
+                            This one-time build establishes the "Expandable Bus" architecture. It ensures that when you onboard the next municipality, the process is automated, secure, and requires zero manual effort from Julie.
                         </p>
-                        <div class="grid grid-cols-1 gap-4">
-                            <div class="flex justify-between items-center p-5 bg-slate-800 rounded-xl border-l-4 border-orange-600 transition-all hover:bg-slate-700">
-                                <span class="font-bold text-white">Career LMS Mothership Architecture</span>
-                                <span class="text-instructure-orange font-black">CAD 17,571</span>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-6 bg-slate-800 rounded-2xl border-l-8 border-orange-600 shadow-lg">
+                                <div class="flex flex-col">
+                                    <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Architecture</span>
+                                    <span class="font-bold text-white text-lg">Career LMS Enterprise Build</span>
+                                </div>
+                                <span class="text-instructure-orange font-black text-2xl">CAD 17,571</span>
                             </div>
-                            <div class="flex justify-between items-center p-5 bg-slate-800 rounded-xl border-l-4 border-orange-500 transition-all hover:bg-slate-700">
-                                <span class="font-bold text-white">Catalog B2B Wholesale Gateway</span>
-                                <span class="text-instructure-orange font-black">CAD 9,439</span>
+                            <div class="flex justify-between items-center p-6 bg-slate-800 rounded-2xl border-l-8 border-orange-500 shadow-lg">
+                                <div class="flex flex-col">
+                                    <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Wholesale</span>
+                                    <span class="font-bold text-white text-lg">Catalog B2B Infrastructure</span>
+                                </div>
+                                <span class="text-instructure-orange font-black text-2xl">CAD 9,439</span>
                             </div>
-                            <div class="flex justify-between items-center p-5 bg-slate-800 rounded-xl border-l-4 border-orange-400 transition-all hover:bg-slate-700">
-                                <span class="font-bold text-white">Managed Course Migration & Studio</span>
-                                <span class="text-instructure-orange font-black">CAD 3,481</span>
+                            <div class="flex justify-between items-center p-6 bg-slate-800 rounded-2xl border-l-8 border-orange-400 shadow-lg">
+                                <div class="flex flex-col">
+                                    <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Assets</span>
+                                    <span class="font-bold text-white text-lg">Migration & Studio Set</span>
+                                </div>
+                                <span class="text-instructure-orange font-black text-2xl">CAD 3,481</span>
                             </div>
                         </div>
                     </div>
@@ -229,66 +236,71 @@
         </section>
 
         <!-- B2B Network Section -->
-        <section id="scale" class="max-w-7xl mx-auto px-6 mb-24">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <section id="network" class="max-w-7xl mx-auto px-6 mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-5">
-                    <h2 class="text-4xl font-black mb-6 leading-tight text-slate-900 uppercase">The "Landlord" <br><span class="text-instructure-orange italic tracking-tighter">Network Model.</span></h2>
-                    <p class="text-lg text-gray-500 mb-8 leading-relaxed font-light">
+                    <h2 class="text-5xl font-black mb-8 leading-tight text-slate-900 uppercase tracking-tighter italic">The Landlord Model.</h2>
+                    <p class="text-lg text-gray-500 mb-10 leading-relaxed font-light">
                         Visualizing the hierarchy: FireWise owns the <strong>Central Authority.</strong> Municipalities act as sub-accounts, managed autonomously by local Fire Captains through self-service portals.
                     </p>
                     <div class="space-y-6">
-                        <div class="bg-white p-6 rounded-2xl border border-gray-100 card-shadow flex items-start space-x-5">
-                            <div class="bg-slate-900 text-white p-3 rounded-lg text-2xl">&#x1F512;</div>
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 flex items-start space-x-6">
+                            <div class="bg-slate-900 text-white p-4 rounded-xl text-3xl font-bold shadow-lg shadow-slate-200">
+                                <span class="block transform hover:rotate-12 transition-transform">&#x1F512;</span>
+                            </div>
                             <div>
-                                <h5 class="font-bold text-slate-800 text-lg">Sub-Account Isolation</h5>
-                                <p class="text-sm text-gray-500">Vancouver never sees Toronto's data. Every B2B node is a clean, secure, and private sandbox.</p>
+                                <h5 class="font-black text-slate-800 text-xl mb-1 tracking-tight">Node Isolation</h5>
+                                <p class="text-sm text-gray-500 font-medium">Vancouver never sees Toronto's data. Every B2B node is a secure, municipal-grade compliance sandbox.</p>
                             </div>
                         </div>
-                        <div class="bg-white p-6 rounded-2xl border border-gray-100 card-shadow flex items-start space-x-5">
-                            <div class="bg-instructure-orange text-white p-3 rounded-lg text-2xl">&#x1F468;&#x200D;&#x2708;&#xFE0F;</div>
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 flex items-start space-x-6">
+                            <div class="bg-instructure-orange text-white p-4 rounded-xl text-3xl font-bold shadow-lg shadow-orange-100">
+                                <span class="block transform hover:rotate-12 transition-transform">&#x1F468;&#x200D;&#x2708;&#xFE0F;</span>
+                            </div>
                             <div>
-                                <h5 class="font-bold text-slate-800 text-lg">Captain Autonomy</h5>
-                                <p class="text-sm text-gray-500">Captains track team progress and download compliance reports without internal support from Julie.</p>
+                                <h5 class="font-black text-slate-800 text-xl mb-1 tracking-tight">Captain Command</h5>
+                                <p class="text-sm text-gray-500 font-medium">Captains manage their own teams and download reports without manual support from Julie.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="lg:col-span-7">
-                    <div class="node-network shadow-2xl relative">
-                        <!-- Connecting Lines (CSS based) -->
-                        <div class="node-line-h" style="top: 50%; left: 15%; width: 20%;"></div>
-                        <div class="node-line-h" style="top: 50%; right: 15%; width: 20%;"></div>
-                        <div class="node-line-v" style="top: 15%; left: 50%; height: 20%;"></div>
-                        <div class="node-line-v" style="bottom: 15%; left: 50%; height: 20%;"></div>
+                    <div class="node-network shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] relative">
+                        <!-- Horizontal Connecting Lines -->
+                        <div class="node-line-h" style="top: 50%; left: 15%; width: 25%;"></div>
+                        <div class="node-line-h" style="top: 50%; right: 15%; width: 25%;"></div>
+                        <!-- Vertical Connecting Lines -->
+                        <div class="node-line-v" style="top: 15%; left: 50%; height: 25%;"></div>
+                        <div class="node-line-v" style="bottom: 15%; left: 50%; height: 25%;"></div>
 
-                        <div class="central-authority shadow-orange-200">
-                            <p class="text-4xl mb-1 text-instructure-orange">&#x1F6E1;&#xFE0F;</p>
-                            <h4 class="font-black text-2xl tracking-tighter uppercase">FireWise HQ</h4>
-                            <p class="text-[10px] text-orange-400 font-bold tracking-[0.2em] uppercase mt-1">Platform Landlord</p>
+                        <div class="central-authority">
+                            <p class="text-5xl mb-2 text-instructure-orange">&#x1F6E1;&#xFE0F;</p>
+                            <h4 class="font-black text-2xl tracking-tighter uppercase mb-1">FireWise HQ</h4>
+                            <p class="text-[10px] text-orange-400 font-black tracking-[0.3em] uppercase opacity-80">Network Parent</p>
                         </div>
 
-                        <div class="department-node" style="top: 10%; left: 12%;">
-                            <h5 class="font-black text-xs text-slate-800 uppercase tracking-tighter">Vancouver FD</h5>
-                            <p class="text-[9px] text-gray-400 font-bold">Node VAN-1031</p>
+                        <div class="department-node" style="top: 10%; left: 15%;">
+                            <h5 class="font-black text-sm text-slate-800 uppercase tracking-tighter">Vancouver FD</h5>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-1">Node VAN-01</p>
                             <div class="captain-badge">👨‍✈️</div>
                         </div>
 
-                        <div class="department-node" style="top: 10%; right: 12%;">
-                            <h5 class="font-black text-xs text-slate-800 uppercase tracking-tighter">Toronto Fire</h5>
-                            <p class="text-[9px] text-gray-400 font-bold">Node TOR-1033</p>
+                        <div class="department-node" style="top: 10%; right: 15%;">
+                            <h5 class="font-black text-sm text-slate-800 uppercase tracking-tighter">Toronto Fire</h5>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-1">Node TOR-01</p>
                             <div class="captain-badge">👨‍✈️</div>
                         </div>
 
-                        <div class="department-node" style="bottom: 10%; left: 12%;">
-                            <h5 class="font-black text-xs text-slate-800 uppercase tracking-tighter">Dubai Civil</h5>
-                            <p class="text-[9px] text-gray-400 font-bold">Node DUB-HQ</p>
+                        <div class="department-node" style="bottom: 10%; left: 15%;">
+                            <h5 class="font-black text-sm text-slate-800 uppercase tracking-tighter">Dubai Defense</h5>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-1">Global Node</p>
                             <div class="captain-badge">👨‍✈️</div>
                         </div>
 
-                        <div class="department-node" style="bottom: 10%; right: 12%;">
-                            <h5 class="font-black text-xs text-slate-800 uppercase tracking-tighter">Kelowna Fire</h5>
-                            <p class="text-[9px] text-gray-400 font-bold">Node KEL-01</p>
+                        <div class="department-node" style="bottom: 10%; right: 15%;">
+                            <h5 class="font-black text-sm text-slate-800 uppercase tracking-tighter">Kelowna Fire</h5>
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-1">Local Node</p>
                             <div class="captain-badge">👨‍✈️</div>
                         </div>
                     </div>
@@ -298,52 +310,53 @@
 
         <!-- ROI Section -->
         <section id="roi" class="max-w-7xl mx-auto px-6 mb-24">
-            <div class="bg-white rounded-[4rem] p-12 lg:p-20 card-shadow border border-slate-100">
-                <div class="text-center mb-16">
-                    <h2 class="text-5xl font-black mb-6 text-slate-900">The "Profit Wedge" Engine</h2>
-                    <p class="text-xl text-gray-500 max-w-4xl mx-auto font-light leading-relaxed mb-10">
-                        By choosing the 3-year term, you lock in your baseline infrastructure while your revenue scales with every new department node.
+            <div class="bg-white rounded-[4rem] p-12 lg:p-24 shadow-2xl shadow-slate-200/50 border border-slate-100">
+                <div class="text-center mb-20">
+                    <h2 class="text-6xl font-black mb-8 text-slate-900 tracking-tighter uppercase italic">The Profit Engine</h2>
+                    <p class="text-xl text-gray-500 max-w-4xl mx-auto font-light leading-relaxed mb-12">
+                        Locking in a 3-year term protects FireWise from inflation while your revenue scales with every new department node.
                     </p>
                     
-                    <!-- NEW: PRICING LOGIC CARDS -->
-                    <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
-                        <div class="flex-1 bg-slate-50 border border-slate-200 p-8 rounded-3xl">
-                            <h4 class="text-xs uppercase tracking-widest font-extrabold text-gray-400 mb-4">Retail Strategy</h4>
-                            <p class="text-5xl font-black text-slate-800">$1,550</p>
-                            <p class="text-sm text-gray-500 mt-2 font-bold uppercase tracking-tighter">Per Individual Learner</p>
+                    <!-- Pricing Logic Grid -->
+                    <div class="flex flex-col md:flex-row justify-center gap-8 mb-16 max-w-4xl mx-auto">
+                        <div class="flex-1 bg-slate-50 border border-slate-200 p-10 rounded-[2.5rem] transition-transform hover:scale-105">
+                            <h4 class="text-xs uppercase tracking-widest font-black text-gray-400 mb-4 italic">Retail Revenue</h4>
+                            <p class="text-6xl font-black text-slate-800">$1,550</p>
+                            <p class="text-[11px] text-gray-500 mt-4 font-black uppercase tracking-[0.2em]">Individual Learner Seat</p>
                         </div>
-                        <div class="flex-1 bg-orange-50 border border-orange-200 p-8 rounded-3xl relative overflow-hidden">
-                            <div class="absolute top-0 right-0 p-3 bg-instructure-orange text-white font-bold text-[10px] uppercase tracking-widest rounded-bl-xl">Growth Target</div>
-                            <h4 class="text-xs uppercase tracking-widest font-extrabold text-orange-600 mb-4">Wholesale Target</h4>
-                            <p class="text-5xl font-black text-instructure-orange">$1,100</p>
-                            <p class="text-sm text-orange-800 mt-2 font-bold uppercase tracking-tighter">Per B2B Node Seat</p>
+                        <div class="flex-1 bg-orange-50 border border-orange-200 p-10 rounded-[2.5rem] relative overflow-hidden transition-transform hover:scale-105">
+                            <div class="absolute top-0 right-0 p-4 bg-instructure-orange text-white font-black text-[10px] uppercase tracking-widest rounded-bl-2xl">B2B Core</div>
+                            <h4 class="text-xs uppercase tracking-widest font-black text-orange-600 mb-4 italic">Wholesale Target</h4>
+                            <p class="text-6xl font-black text-instructure-orange">$1,100</p>
+                            <p class="text-[11px] text-orange-800 mt-4 font-black uppercase tracking-[0.2em]">Municipal Node Seat</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                    <div class="lg:col-span-4 space-y-6">
-                        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-                            <h4 class="text-xs uppercase tracking-widest font-bold text-gray-400 mb-2">Year 1 Breakeven</h4>
-                            <p class="text-4xl font-black text-slate-800">32 Seats</p>
-                            <p class="text-xs text-gray-500 mt-2 italic font-semibold">At Wholesale, just 32 seats cover the entire Build + Subscription.</p>
+                    <div class="lg:col-span-4 space-y-8">
+                        <div class="bg-white p-10 rounded-[2rem] border-2 border-slate-100 shadow-sm transition-all hover:border-slate-800 group">
+                            <h4 class="text-[10px] uppercase tracking-widest font-black text-gray-400 mb-3 group-hover:text-slate-800">Y1 Break-Even</h4>
+                            <p class="text-5xl font-black text-slate-800">32 Seats</p>
+                            <p class="text-xs text-gray-500 mt-3 font-semibold italic">Just 32 wholesale seats cover the <u>entire</u> Build + Subscription.</p>
                         </div>
-                        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-xl">
-                            <h4 class="text-xs uppercase tracking-widest font-bold text-orange-400 mb-2">Year 2/3 Operating Cost</h4>
-                            <p class="text-4xl font-black text-white">12 Seats</p>
-                            <p class="text-xs text-gray-400 mt-2 italic font-semibold">Maintenance covered by 1/4 of a single city node enrollment.</p>
+                        <div class="bg-slate-900 p-10 rounded-[2rem] border border-slate-800 shadow-2xl transition-all hover:bg-black group">
+                            <h4 class="text-[10px] uppercase tracking-widest font-black text-orange-400 mb-3">Operating Ceiling</h4>
+                            <p class="text-5xl font-black text-white">12 Seats</p>
+                            <p class="text-xs text-gray-400 mt-3 font-semibold italic">Annual maintenance is covered by 12 individual seats.</p>
                         </div>
-                        <div class="bg-green-50 p-8 rounded-3xl border border-green-200">
-                            <h4 class="text-xs uppercase tracking-widest font-bold text-green-600 mb-2">Operating Leverage</h4>
-                            <p class="text-4xl font-black text-green-700">90%+</p>
-                            <p class="text-xs text-green-600 mt-2 italic font-semibold">Net margin potential on scaling revenue.</p>
+                        <div class="bg-green-50 p-10 rounded-[2rem] border-2 border-green-200 shadow-sm">
+                            <h4 class="text-[10px] uppercase tracking-widest font-black text-green-600 mb-3">Profit Wedge</h4>
+                            <p class="text-5xl font-black text-green-700">90%+</p>
+                            <p class="text-xs text-green-600 mt-3 font-semibold italic">Net margin potential on every city node post-breakeven.</p>
                         </div>
                     </div>
                     
-                    <div class="lg:col-span-8">
+                    <div class="lg:col-span-8 flex flex-col justify-center">
                         <div class="chart-container">
                             <canvas id="roiChart"></canvas>
                         </div>
+                        <p class="text-center text-[10px] text-gray-400 mt-12 uppercase font-black tracking-[0.4em]">Margin Scaling vs Departmental Growth</p>
                     </div>
                 </div>
             </div>
@@ -351,26 +364,26 @@
 
     </main>
 
-    <footer class="bg-slate-900 text-white py-20 border-t-8 border-instructure-orange">
+    <footer class="bg-slate-900 text-white py-24 border-t-[12px] border-instructure-orange">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-4xl font-black mb-10 italic">The Time for Execution is Now.</h3>
-            <a href="https://calendar.app.google/dG4Vv1rhev7sw7YaA" target="_blank" class="inline-block bg-instructure-orange px-12 py-5 rounded-full text-sm font-black uppercase tracking-[0.2em] shadow-[0_0_40px_rgba(243,89,42,0.6)] hover:scale-105 transition-all mb-12">
-                Approve Strategy & Book Demo
+            <h3 class="text-5xl font-black mb-12 italic uppercase tracking-tighter">The Strategy is Set. Build the Fortress.</h3>
+            <a href="https://calendar.app.google/dG4Vv1rhev7sw7YaA" target="_blank" class="inline-block bg-instructure-orange px-16 py-7 rounded-full text-sm font-black uppercase tracking-[0.4em] shadow-[0_0_60px_rgba(243,89,42,0.6)] hover:scale-110 transition-all mb-16">
+                Approve & Book Demo
             </a>
             
-            <div class="pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="pt-16 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-12">
                 <div class="text-left">
-                    <p class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Package Specification: Q-585109-1</p>
-                    <p class="text-xs text-gray-600 max-w-sm">Includes 252 Monthly Active Users, 2,500 Annual Enrollments, and Full Multi-Tenant Sub-Account Architecture.</p>
+                    <p class="text-[11px] font-black uppercase tracking-[0.3em] text-orange-500 mb-3 italic underline decoration-2 underline-offset-4">Spec: Q-585109-1</p>
+                    <p class="text-sm text-gray-400 max-w-md font-medium leading-relaxed">Package includes 252 Monthly Active Users, 2,500 Annual Enrollments, and full Sub-Account Parent/Child architecture.</p>
                 </div>
-                <div class="flex items-center space-x-6">
-                    <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
-                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500 mb-1">Data Residency</p>
-                        <p class="text-xs font-bold text-white">Hosted in Canada &#x1F1E8;&#x1F1E6;</p>
+                <div class="flex items-center space-x-12">
+                    <div class="bg-slate-800 px-8 py-4 rounded-2xl border border-slate-700 shadow-xl">
+                        <p class="text-[9px] font-black uppercase tracking-[0.25em] text-orange-500 mb-1">Data Sovereignty</p>
+                        <p class="text-xs font-black text-white tracking-widest">HOSTED IN CANADA &#x1F1E8;&#x1F1E6;</p>
                     </div>
                     <div class="text-right">
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-1">Prepared for</p>
-                        <p class="text-sm font-black text-white">Richie Turley | FireWise Consulting Ltd.</p>
+                        <p class="text-[9px] font-bold uppercase tracking-widest text-gray-500 mb-1">Prepared For</p>
+                        <p class="text-lg font-black text-white tracking-tighter">Richie Turley | FireWise Consulting Ltd.</p>
                     </div>
                 </div>
             </div>
@@ -378,6 +391,7 @@
     </footer>
 
     <script>
+        // Chart.js Label Wrapping Logic (16 Char Logic)
         const wrapLabel = (label) => {
             if (label.length <= 16) return label;
             const words = label.split(' ');
@@ -395,23 +409,20 @@
             return lines;
         };
 
+        // Standard Tooltip Config for Multi-line labels
         const customTooltipConfig = {
             callbacks: {
                 title: function(tooltipItems) {
                     const item = tooltipItems[0];
                     let label = item.chart.data.labels[item.dataIndex];
-                    if (Array.isArray(label)) {
-                        return label.join(' ');
-                    } else {
-                        return label;
-                    }
+                    return Array.isArray(label) ? label.join(' ') : label;
                 }
             }
         };
 
         const initInvestmentChart = () => {
             const ctx = document.getElementById('investmentChart').getContext('2d');
-            const labels = ['Career LMS Implementation', 'Catalog B2B Infrastructure', 'Migration & Studio Set', 'Baseline Subscription'].map(wrapLabel);
+            const labels = ['Career LMS Implementation', 'Catalog B2B Architecture', 'Migration & Studio Set', 'Baseline Subscription'].map(wrapLabel);
             
             new Chart(ctx, {
                 type: 'doughnut',
@@ -421,15 +432,15 @@
                         data: [17571, 9439, 3481, 17974],
                         backgroundColor: ['#F3592A', '#fb923c', '#fdba74', '#475569'],
                         borderWidth: 0,
-                        hoverOffset: 20
+                        hoverOffset: 30
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    cutout: '75%',
+                    cutout: '78%',
                     plugins: {
-                        legend: { position: 'right', labels: { color: '#94a3b8', font: { family: 'Outfit', weight: 'bold', size: 11 } } },
+                        legend: { position: 'right', labels: { color: '#94a3b8', font: { family: 'Outfit', weight: 'bold', size: 10 } } },
                         tooltip: customTooltipConfig
                     }
                 }
@@ -438,24 +449,25 @@
 
         const initRoiChart = () => {
             const ctx = document.getElementById('roiChart').getContext('2d');
-            const labels = ['Y1 Investment Baseline', '1 Dept Node (50 Users)', '4 Dept Nodes (200 Users)', '10 Dept Nodes (500 Users)'].map(wrapLabel);
+            const labels = ['Year 1 Baseline', '1 Node (50 Users)', '4 Nodes (200 Users)', '10 Nodes (500 Users)'].map(wrapLabel);
 
             new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Net Profit Potential (CAD)',
-                        data: [-30493, 24500, 185000, 480000],
+                        label: 'Profit Wedge Potential (CAD)',
+                        data: [-30493, 24500, 185000, 520000],
                         borderColor: '#F3592A',
                         backgroundColor: 'rgba(243, 89, 42, 0.1)',
-                        borderWidth: 6,
+                        borderWidth: 10,
                         fill: true,
-                        tension: 0.4,
+                        tension: 0.45,
                         pointBackgroundColor: '#243342',
                         pointBorderColor: '#fff',
                         pointBorderWidth: 4,
-                        pointRadius: 8
+                        pointRadius: 10,
+                        pointHoverRadius: 14
                     }]
                 },
                 options: {
@@ -468,14 +480,14 @@
                             callbacks: {
                                 ...customTooltipConfig.callbacks,
                                 label: function(context) {
-                                    return 'Margin Potential: $' + context.parsed.y.toLocaleString();
+                                    return 'Potential Margin: $' + context.parsed.y.toLocaleString();
                                 }
                             }
                         }
                     },
                     scales: {
                         y: { 
-                            grid: { color: '#e2e8f0', drawBorder: false },
+                            grid: { color: '#f1f5f9', drawBorder: false },
                             ticks: { font: { family: 'Outfit', weight: 'bold' }, callback: (v) => '$' + (v / 1000) + 'k' }
                         },
                         x: { grid: { display: false }, ticks: { font: { family: 'Outfit', weight: 'bold', size: 10 } } }
@@ -490,3 +502,4 @@
         };
     </script>
 </body>
+</html>
