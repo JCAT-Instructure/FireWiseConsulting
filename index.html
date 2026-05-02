@@ -64,6 +64,16 @@
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(243, 89, 42, 0); }
         }
         .pulse { animation: pulse-orange 3s infinite; }
+        
+        /* Interactive Elements */
+        .cta-pulse {
+            animation: cta-glow 2s infinite;
+        }
+        @keyframes cta-glow {
+            0% { box-shadow: 0 0 0 0 rgba(0,0,0, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0,0,0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0,0,0, 0); }
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -114,7 +124,7 @@
                     <div class="bg-white p-10 rounded-[2rem] card-shadow border border-orange-50">
                         <h4 class="font-bold text-gray-400 mb-4 uppercase text-xs tracking-widest">Insight: The Psychology of Ownership</h4>
                         <p class="text-lg leading-relaxed text-gray-700 font-light italic">
-                            "By giving a Fire Captain their own sub-account, you are giving them Command. They don't want to be students in Richie's school; they want to be 'Leaders' in their own branded territory."
+                            "By giving a Fire Captain their own sub-account, you are giving them **Command.** They don't want to be 'students' in Richie's school; they want to be 'Leaders' in their own branded territory."
                         </p>
                     </div>
                 </div>
@@ -124,29 +134,29 @@
         <!-- Section: Operational Freedom -->
         <section id="freedom" class="section-content hidden">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">The Command & Control Workflow</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">Remove the manual bottlenecks. Let Captains access their own departments while FireWise manages the high-level quality control.</p>
+                <h2 class="text-4xl font-bold mb-4 italic">The "Command & Control" Workflow</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Remove the manual bottlenecks. Let Captains self-provision their own departments while FireWise manages the high-level quality control.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-16">
                 <div class="bg-white p-6 rounded-xl border border-gray-100 card-shadow text-center">
                     <div class="text-3xl mb-4">🏬</div>
-                    <h4 class="font-bold text-sm mb-2 uppercase">Storefront</h4>
+                    <h4 class="font-bold text-sm mb-2 uppercase tracking-tight">Storefront</h4>
                     <p class="text-[10px] text-gray-500">Captain arrives at your branded Catalog.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-gray-100 card-shadow text-center">
                     <div class="text-3xl mb-4">🔑</div>
-                    <h4 class="font-bold text-sm mb-2 uppercase">Auth</h4>
+                    <h4 class="font-bold text-sm mb-2 uppercase tracking-tight">Auth</h4>
                     <p class="text-[10px] text-gray-500">Captain registers & unlocks their Node.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-gray-100 card-shadow text-center">
                     <div class="text-3xl mb-4">💳</div>
-                    <h4 class="font-bold text-sm mb-2 uppercase">Buy</h4>
+                    <h4 class="font-bold text-sm mb-2 uppercase tracking-tight">Buy</h4>
                     <p class="text-[10px] text-gray-500">Direct purchase of Bulk Vouchers.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-orange-200 card-shadow text-center bg-orange-50">
                     <div class="text-3xl mb-4">🛡️</div>
-                    <h4 class="font-bold text-sm mb-2 uppercase">Inherit</h4>
+                    <h4 class="font-bold text-sm mb-2 uppercase tracking-tight font-bold text-instructure-orange">Inherit</h4>
                     <p class="text-[10px] text-gray-500 font-bold">Sub-Account auto-activates.</p>
                 </div>
             </div>
@@ -175,28 +185,22 @@
                     <p class="text-[10px] text-orange-400 font-bold tracking-widest">GLOBAL ADMIN</p>
                 </div>
 
-                <!-- Child Node 1: Vancouver -->
+                <!-- Child Nodes -->
                 <div class="company-node shadow-xl" style="top: 15%; left: 15%;">
                     <h4 class="font-bold text-sm">Vancouver Fire</h4>
                     <p class="text-[9px] text-gray-400 uppercase tracking-widest">Sub-Account Node</p>
-                    <div class="captain-bubble" title="Fire Captain - Access Reports">👨‍✈️</div>
+                    <div class="captain-bubble" title="Fire Captain Manager">👨‍✈️</div>
                 </div>
-
-                <!-- Child Node 2: Toronto -->
                 <div class="company-node shadow-xl" style="top: 15%; right: 15%;">
                     <h4 class="font-bold text-sm">Toronto Fire</h4>
                     <p class="text-[9px] text-gray-400 uppercase tracking-widest">Sub-Account Node</p>
-                    <div class="captain-bubble" title="Fire Captain - Review ROI">👨‍✈️</div>
+                    <div class="captain-bubble" title="Fire Captain Manager">👨‍✈️</div>
                 </div>
-
-                <!-- Child Node 3: Dubai -->
                 <div class="company-node shadow-xl" style="bottom: 15%; left: 15%;">
                     <h4 class="font-bold text-sm">Dubai Civil Defense</h4>
                     <p class="text-[9px] text-gray-400 uppercase tracking-widest">Sub-Account Node</p>
-                    <div class="captain-bubble" title="Fire Captain Shares Idea">👨‍✈️</div>
+                    <div class="captain-bubble" title="Fire Captain Manager">👨‍✈️</div>
                 </div>
-
-                <!-- Child Node 4: Kelowna -->
                 <div class="company-node shadow-xl" style="bottom: 15%; right: 15%;">
                     <h4 class="font-bold text-sm">Kelowna Fire</h4>
                     <p class="text-[9px] text-gray-400 uppercase tracking-widest">Sub-Account Node</p>
@@ -247,12 +251,12 @@
         <!-- Section: Comparison -->
         <section id="comparison" class="section-content hidden">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Thinkific vs. FireWise Authority</h2>
+                <h2 class="text-4xl font-bold mb-4 italic">Defeating "Simple" with Authority</h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-white p-10 rounded-3xl border border-gray-100 card-shadow grayscale opacity-50">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center">Thinkific (The Small Biz)</h3>
+                    <h3 class="text-2xl font-bold mb-6 flex items-center">Thinkific (The Retail Store)</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start space-x-3 text-sm">
                             <span class="text-red-500">✕</span>
@@ -262,14 +266,10 @@
                             <span class="text-red-500">✕</span>
                             <span>No true isolation between department data.</span>
                         </li>
-                        <li class="flex items-start space-x-3 text-sm">
-                            <span class="text-red-500">✕</span>
-                            <span>"Cheap" perception reduces your $1,550/seat value.</span>
-                        </li>
                     </ul>
                 </div>
                 <div class="bg-instructure-slate text-white p-10 rounded-3xl border-4 border-orange-500 card-shadow scale-105">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center text-orange-500">Instructure (The Enterprise)</h3>
+                    <h3 class="text-2xl font-bold mb-6 flex items-center text-orange-500 tracking-tight">Instructure (The Network Engine)</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start space-x-3 text-sm">
                             <span class="text-green-400 font-bold">✓</span>
@@ -277,11 +277,7 @@
                         </li>
                         <li class="flex items-start space-x-3 text-sm">
                             <span class="text-green-400 font-bold">✓</span>
-                            <span>Bank-grade security and data isolation hosted in Canada.</span>
-                        </li>
-                        <li class="flex items-start space-x-3 text-sm">
-                            <span class="text-green-400 font-bold">✓</span>
-                            <span>Matches your status as the #1 fire training provider.</span>
+                            <span>Matches your status as the #1 Canadian provider.</span>
                         </li>
                     </ul>
                 </div>
@@ -297,7 +293,7 @@
                 <p class="font-bold text-sm tracking-tight">FireWise Strategic Infrastructure Roadmap</p>
                 <p class="text-[10px] opacity-80">Prepared for Rich Turley | FireWise Consulting Ltd.</p>
             </div>
-            <button onclick="alert('Proposal Deep-Dive Scheduled!')" class="bg-instructure-slate px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-black transition-all shadow-xl">Approve Strategy</button>
+            <button onclick="window.open('https://calendly.com/demo', '_blank')" class="bg-instructure-slate px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-black transition-all shadow-xl cta-pulse">Approve Strategy & Book Demo</button>
         </div>
     </div>
 
