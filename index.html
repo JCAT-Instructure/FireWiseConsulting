@@ -8,14 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- 
-        PALETTE: "Professional & Vibrant"
-        Primary: #F3592A (Instructure Orange)
-        Secondary: #243342 (Deep Slate)
-        Success: #16A34A (Canadian Growth Green)
-        Background: #F8FAFC (System Neutral)
-    -->
-
     <style>
         body { font-family: 'Outfit', sans-serif; background-color: #F8FAFC; color: #243342; scroll-behavior: smooth; }
         .text-instructure-orange { color: #F3592A; }
@@ -35,7 +27,7 @@
             max-height: 400px;
         }
 
-        /* B2B Node Network - Pure CSS/HTML Implementation (NO SVG) */
+        /* B2B Node Network - Pure CSS Implementation (NO SVG) */
         .node-network {
             position: relative;
             height: 440px;
@@ -117,7 +109,7 @@
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center space-x-3">
                 <div class="bg-instructure-orange text-white w-10 h-10 rounded-lg flex items-center justify-center font-black text-xl">F</div>
-                <span class="text-2xl font-extrabold tracking-tighter text-slate-800">FireWise</span>
+                <span class="text-2xl font-extrabold tracking-tighter text-slate-800 text-slate-900">FireWise</span>
             </div>
             <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
                 <a href="#vision" class="hover:text-instructure-orange transition-colors">Vision</a>
@@ -147,7 +139,7 @@
                         Revenue <br><span class="text-instructure-orange italic">Leverage.</span>
                     </h1>
                     <p class="text-xl text-gray-500 mb-10 leading-relaxed font-light">
-                        We are moving FireWise from a manual delivery model to a high-yield B2B infrastructure. This roadmap prioritizes Operating Leverage, allowing you to scale municipal contracts across Canada while decoupling growth from labor costs.
+                        Moving FireWise from a manual delivery model to a high-yield B2B infrastructure. This roadmap prioritizes <strong>Operating Leverage</strong>, allowing you to scale municipal contracts across Canada while decoupling growth from labor costs.
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="bg-white p-6 rounded-2xl card-shadow border-t-4 border-orange-500">
@@ -183,13 +175,13 @@
             </div>
         </section>
 
-        <!-- Implementation Section -->
+        <!-- Implementation & Annual Maintenance Section -->
         <section id="foundation" class="bg-slate-900 text-white py-28 mb-24">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-20">
                     <h2 class="text-5xl lg:text-6xl font-black mb-8 uppercase tracking-tighter italic">Architectural Integrity</h2>
                     <p class="text-gray-400 max-w-4xl mx-auto text-xl font-light leading-relaxed">
-                        "We are prepared to negotiate implementation details to ensure we don't remove components instrumental to building your foundation. If other vendors aren't discussing this architecture, they don't see your future. We do!"
+                        "We are prepared to negotiate implementation details to ensure we don't remove any components instrumental to building your foundation. If other vendors aren't discussing this architecture, they don't see your future. We do!"
                     </p>
                 </div>
 
@@ -198,38 +190,40 @@
                         <div class="chart-container">
                             <canvas id="investmentChart"></canvas>
                         </div>
-                        <div class="mt-8 pt-8 border-t border-slate-700/50 text-center">
-                            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-500">Year 1 Infrastructure Composition</p>
+                        <div class="mt-8 pt-8 border-t border-slate-700/50 text-center flex justify-around">
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 mb-1 text-center">Year 1 Total</p>
+                                <p class="text-xl font-black">CAD 48,467</p>
+                            </div>
+                            <div class="border-l border-slate-700 h-10 self-center"></div>
+                            <div>
+                                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-green-500 mb-1 text-center">Steady-State</p>
+                                <p class="text-xl font-black">CAD 17,974/yr</p>
+                            </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-4xl font-black mb-10 leading-tight">Capital Investment: <br><span class="text-instructure-orange">CAD 48,467.20</span></h3>
+                        <h3 class="text-4xl font-black mb-10 leading-tight">Investment Summary</h3>
                         <p class="text-gray-400 mb-10 leading-relaxed text-lg font-light">
-                            This one-time build establishes the "Expandable Bus" architecture. It ensures that when you onboard the next municipality, the process is automated, secure, and requires zero manual effort from Julie.
+                            Establish the "Expandable Bus" architecture. After the one-time build, your costs drop to a predictable, fixed annual maintenance fee, decoupling revenue from expenses.
                         </p>
                         <div class="space-y-4">
                             <div class="flex justify-between items-center p-6 bg-slate-800 rounded-2xl border-l-8 border-orange-600 shadow-lg">
                                 <div class="flex flex-col">
-                                    <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Architecture</span>
-                                    <span class="font-bold text-white text-lg">Career LMS Enterprise Build</span>
+                                    <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">One-Time Infrastructure Build</span>
+                                    <span class="font-bold text-white text-lg italic">Foundation & Implementation</span>
                                 </div>
-                                <span class="text-instructure-orange font-black text-2xl">CAD 17,571</span>
+                                <span class="text-instructure-orange font-black text-2xl tracking-tighter">CAD 30,493</span>
                             </div>
-                            <div class="flex justify-between items-center p-6 bg-slate-800 rounded-2xl border-l-8 border-orange-500 shadow-lg">
+                            <div class="flex justify-between items-center p-6 bg-slate-800 rounded-2xl border-l-8 border-green-600 shadow-lg">
                                 <div class="flex flex-col">
-                                    <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Wholesale</span>
-                                    <span class="font-bold text-white text-lg">Catalog B2B Infrastructure</span>
+                                    <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Year 1+ Subscription</span>
+                                    <span class="font-bold text-white text-lg italic">Annual Steady-State Cost</span>
                                 </div>
-                                <span class="text-instructure-orange font-black text-2xl">CAD 9,439</span>
-                            </div>
-                            <div class="flex justify-between items-center p-6 bg-slate-800 rounded-2xl border-l-8 border-orange-400 shadow-lg">
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Assets</span>
-                                    <span class="font-bold text-white text-lg">Migration & Studio Set</span>
-                                </div>
-                                <span class="text-instructure-orange font-black text-2xl">CAD 3,481</span>
+                                <span class="text-green-500 font-black text-2xl tracking-tighter">CAD 17,974</span>
                             </div>
                         </div>
+                        <p class="mt-6 text-xs text-gray-500 font-bold uppercase tracking-widest italic text-center">Total Year 1 Outlay: CAD 48,467.20</p>
                     </div>
                 </div>
             </div>
@@ -250,7 +244,7 @@
                             </div>
                             <div>
                                 <h5 class="font-black text-slate-800 text-xl mb-1 tracking-tight">Node Isolation</h5>
-                                <p class="text-sm text-gray-500 font-medium">Vancouver never sees Toronto's data. Every B2B node is a secure, municipal-grade compliance sandbox.</p>
+                                <p class="text-sm text-gray-500 font-medium text-slate-600 leading-relaxed">Vancouver never sees Toronto's data. Every B2B node is a secure, municipal-grade compliance sandbox.</p>
                             </div>
                         </div>
                         <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 flex items-start space-x-6">
@@ -259,7 +253,7 @@
                             </div>
                             <div>
                                 <h5 class="font-black text-slate-800 text-xl mb-1 tracking-tight">Captain Command</h5>
-                                <p class="text-sm text-gray-500 font-medium">Captains manage their own teams and download reports without manual support from Julie.</p>
+                                <p class="text-sm text-gray-500 font-medium text-slate-600 leading-relaxed">Captains manage their own teams and download reports without manual support from Julie.</p>
                             </div>
                         </div>
                     </div>
@@ -267,10 +261,8 @@
                 
                 <div class="lg:col-span-7">
                     <div class="node-network shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] relative">
-                        <!-- Horizontal Connecting Lines -->
                         <div class="node-line-h" style="top: 50%; left: 15%; width: 25%;"></div>
                         <div class="node-line-h" style="top: 50%; right: 15%; width: 25%;"></div>
-                        <!-- Vertical Connecting Lines -->
                         <div class="node-line-v" style="top: 15%; left: 50%; height: 25%;"></div>
                         <div class="node-line-v" style="bottom: 15%; left: 50%; height: 25%;"></div>
 
@@ -312,23 +304,23 @@
         <section id="roi" class="max-w-7xl mx-auto px-6 mb-24">
             <div class="bg-white rounded-[4rem] p-12 lg:p-24 shadow-2xl shadow-slate-200/50 border border-slate-100">
                 <div class="text-center mb-20">
-                    <h2 class="text-6xl font-black mb-8 text-slate-900 tracking-tighter uppercase italic">The Profit Engine</h2>
-                    <p class="text-xl text-gray-500 max-w-4xl mx-auto font-light leading-relaxed mb-12">
-                        Locking in a 3-year term protects FireWise from inflation while your revenue scales with every new department node.
+                    <h2 class="text-6xl font-black mb-8 text-slate-900 tracking-tighter uppercase italic text-center">Operating Leverage</h2>
+                    <p class="text-xl text-gray-500 max-w-4xl mx-auto font-light leading-relaxed mb-12 text-center">
+                        Locking in a 3-year term protects FireWise from inflation while your revenue scales. Decouple your business growth from manual labor.
                     </p>
                     
-                    <!-- Pricing Logic Grid -->
+                    <!-- Pricing Logic Grid - Clear revenue vs cost mapping -->
                     <div class="flex flex-col md:flex-row justify-center gap-8 mb-16 max-w-4xl mx-auto">
                         <div class="flex-1 bg-slate-50 border border-slate-200 p-10 rounded-[2.5rem] transition-transform hover:scale-105">
-                            <h4 class="text-xs uppercase tracking-widest font-black text-gray-400 mb-4 italic">Retail Revenue</h4>
+                            <h4 class="text-xs uppercase tracking-widest font-black text-gray-400 mb-4 italic">FireWise Course Pricing</h4>
                             <p class="text-6xl font-black text-slate-800">$1,550</p>
-                            <p class="text-[11px] text-gray-500 mt-4 font-black uppercase tracking-[0.2em]">Individual Learner Seat</p>
+                            <p class="text-[11px] text-gray-500 mt-4 font-black uppercase tracking-[0.2em]">Retail / Individual Seat</p>
                         </div>
                         <div class="flex-1 bg-orange-50 border border-orange-200 p-10 rounded-[2.5rem] relative overflow-hidden transition-transform hover:scale-105">
-                            <div class="absolute top-0 right-0 p-4 bg-instructure-orange text-white font-black text-[10px] uppercase tracking-widest rounded-bl-2xl">B2B Core</div>
-                            <h4 class="text-xs uppercase tracking-widest font-black text-orange-600 mb-4 italic">Wholesale Target</h4>
+                            <div class="absolute top-0 right-0 p-4 bg-instructure-orange text-white font-black text-[10px] uppercase tracking-widest rounded-bl-2xl">B2B Growth</div>
+                            <h4 class="text-xs uppercase tracking-widest font-black text-orange-600 mb-4 italic text-orange-600">FireWise Wholesale Target</h4>
                             <p class="text-6xl font-black text-instructure-orange">$1,100</p>
-                            <p class="text-[11px] text-orange-800 mt-4 font-black uppercase tracking-[0.2em]">Municipal Node Seat</p>
+                            <p class="text-[11px] text-orange-800 mt-4 font-black uppercase tracking-[0.2em]">Departmental / Node Seat</p>
                         </div>
                     </div>
                 </div>
@@ -338,17 +330,17 @@
                         <div class="bg-white p-10 rounded-[2rem] border-2 border-slate-100 shadow-sm transition-all hover:border-slate-800 group">
                             <h4 class="text-[10px] uppercase tracking-widest font-black text-gray-400 mb-3 group-hover:text-slate-800">Y1 Break-Even</h4>
                             <p class="text-5xl font-black text-slate-800">32 Seats</p>
-                            <p class="text-xs text-gray-500 mt-3 font-semibold italic">Just 32 wholesale seats cover the <u>entire</u> Build + Subscription.</p>
+                            <p class="text-xs text-gray-500 mt-3 font-semibold italic">Just 32 wholesale seats cover the <u>entire</u> Year 1 Build + Subscription.</p>
                         </div>
                         <div class="bg-slate-900 p-10 rounded-[2rem] border border-slate-800 shadow-2xl transition-all hover:bg-black group">
                             <h4 class="text-[10px] uppercase tracking-widest font-black text-orange-400 mb-3">Operating Ceiling</h4>
                             <p class="text-5xl font-black text-white">12 Seats</p>
-                            <p class="text-xs text-gray-400 mt-3 font-semibold italic">Annual maintenance is covered by 12 individual seats.</p>
+                            <p class="text-xs text-gray-400 mt-3 font-semibold italic">Annual maintenance is covered by just 12 individual seats per year.</p>
                         </div>
                         <div class="bg-green-50 p-10 rounded-[2rem] border-2 border-green-200 shadow-sm">
-                            <h4 class="text-[10px] uppercase tracking-widest font-black text-green-600 mb-3">Profit Wedge</h4>
+                            <h4 class="text-[10px] uppercase tracking-widest font-black text-green-600 mb-3">Target Net Margin</h4>
                             <p class="text-5xl font-black text-green-700">90%+</p>
-                            <p class="text-xs text-green-600 mt-3 font-semibold italic">Net margin potential on every city node post-breakeven.</p>
+                            <p class="text-xs text-green-600 mt-3 font-semibold italic">Decoupled revenue scaling potential post-breakeven.</p>
                         </div>
                     </div>
                     
@@ -356,7 +348,7 @@
                         <div class="chart-container">
                             <canvas id="roiChart"></canvas>
                         </div>
-                        <p class="text-center text-[10px] text-gray-400 mt-12 uppercase font-black tracking-[0.4em]">Margin Scaling vs Departmental Growth</p>
+                        <p class="text-center text-[10px] text-gray-400 mt-12 uppercase font-black tracking-[0.4em]">Projected Margin vs Departmental Scale</p>
                     </div>
                 </div>
             </div>
@@ -373,13 +365,13 @@
             
             <div class="pt-16 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-12">
                 <div class="text-left">
-                    <p class="text-[11px] font-black uppercase tracking-[0.3em] text-orange-500 mb-3 italic underline decoration-2 underline-offset-4">Spec: Q-585109-1</p>
-                    <p class="text-sm text-gray-400 max-w-md font-medium leading-relaxed">Package includes 252 Monthly Active Users, 2,500 Annual Enrollments, and full Sub-Account Parent/Child architecture.</p>
+                    <p class="text-[11px] font-black uppercase tracking-[0.3em] text-orange-500 mb-3 italic underline decoration-2 underline-offset-4">Specification ID: Q-585109-1</p>
+                    <p class="text-sm text-gray-400 max-w-md font-medium leading-relaxed">Package includes 252 Monthly Active Users, 2,500 Annual Enrollments, and Full Sub-Account Parent/Child architecture.</p>
                 </div>
                 <div class="flex items-center space-x-12">
                     <div class="bg-slate-800 px-8 py-4 rounded-2xl border border-slate-700 shadow-xl">
-                        <p class="text-[9px] font-black uppercase tracking-[0.25em] text-orange-500 mb-1">Data Sovereignty</p>
-                        <p class="text-xs font-black text-white tracking-widest">HOSTED IN CANADA &#x1F1E8;&#x1F1E6;</p>
+                        <p class="text-[9px] font-black uppercase tracking-[0.25em] text-orange-500 mb-1 text-center">Data Residency</p>
+                        <p class="text-xs font-black text-white tracking-widest text-center uppercase italic">Hosted in Canada &#x1F1E8;&#x1F1E6;</p>
                     </div>
                     <div class="text-right">
                         <p class="text-[9px] font-bold uppercase tracking-widest text-gray-500 mb-1">Prepared For</p>
@@ -391,7 +383,6 @@
     </footer>
 
     <script>
-        // Chart.js Label Wrapping Logic (16 Char Logic)
         const wrapLabel = (label) => {
             if (label.length <= 16) return label;
             const words = label.split(' ');
@@ -409,7 +400,6 @@
             return lines;
         };
 
-        // Standard Tooltip Config for Multi-line labels
         const customTooltipConfig = {
             callbacks: {
                 title: function(tooltipItems) {
@@ -422,7 +412,7 @@
 
         const initInvestmentChart = () => {
             const ctx = document.getElementById('investmentChart').getContext('2d');
-            const labels = ['Career LMS Implementation', 'Catalog B2B Architecture', 'Migration & Studio Set', 'Baseline Subscription'].map(wrapLabel);
+            const labels = ['Career LMS Implementation', 'Catalog B2B Architecture', 'Migration & Studio Setup', 'Steady-State Subscription'].map(wrapLabel);
             
             new Chart(ctx, {
                 type: 'doughnut',
@@ -430,7 +420,7 @@
                     labels: labels,
                     datasets: [{
                         data: [17571, 9439, 3481, 17974],
-                        backgroundColor: ['#F3592A', '#fb923c', '#fdba74', '#475569'],
+                        backgroundColor: ['#F3592A', '#fb923c', '#fdba74', '#16A34A'],
                         borderWidth: 0,
                         hoverOffset: 30
                     }]
